@@ -1,0 +1,47 @@
+#   При настройке значений для этих полей используются библиотеке Kyori Adventure,
+# поэтому чтобы указывать цвета и другие функции, смотрите документацию: https://docs.advntr.dev/minimessage/format.html
+
+# Предупреждение: Все плейсхолдеры (%player%, %name%) могут быть указаны только в строках, в которых они есть по умолчанию.
+#                 Можно их убирать, если мешают, но нельзя добавлять, если их нет в значениях по умолчанию
+
+
+warning:
+  you_not_player: "Вы не игрок, чтобы использовать эту команду!"
+  dont_have_permission: "<red><bold>[!]</bold> <gray>Нет прав на использование этой команды!"
+  command_incorrectly: "<red><bold>[!]</bold> <gray>Команда введена неверно!"
+  too_many_arguments: "<red><bold>[!]</bold> <gray>Слишком много параметров!"
+  plugin_is_disable: "<red><bold>[!]</bold> <gray>Плагин выключен из-за ошибок!"
+
+  platform_name_incorrectly: "<red><bold>[!]</bold> <gray>Имя платформы введено неверно!"
+  stage_name_incorrectly: "<red><bold>[!]</bold> <gray>Имя стадии введено неверно!"
+  list_page_incorrectly: "<red><bold>[!]</bold> <gray>На этой странице нет платформ!"
+
+message:
+  help_message: " <strikethrough><gradient:#fc7109:#fcd209>     </gradient></strikethrough> <gray>Помощь /stp </gray><strikethrough><gradient:#fcd209:#fc7109>     </gradient></strikethrough>
+  \n  <#fc7109>- <hover:show_text:'<gray>Показ информации о командах плагина'><gray>/stp help</hover>
+  \n  <#fc7109>- <hover:show_text:'<gray>Перезагрузка плагина'><gray>/stp reload</hover>
+  \n  <#fc7109>- <hover:show_text:'<gray>Просмотр информации о платформе (по умолчанию ближайшая платформа)'><gray>/stp info</hover> <hover:show_text:'<gray>Имя платформы <gold>(Нобязательный параметр)</gold>'><#fc7109>[Имя платформы]</hover>
+  \n  <#fc7109>- <hover:show_text:'<gray>Просмотр страницы со списком платформ (по умолчанию страница 1)'><gray>/stp list</hover> <hover:show_text:'<gray>Номер страницы в списке <gold>(Необязательный параметр)</gold>'><#fc7109>[Страница]</hover>
+  \n  <#fc7109>- <hover:show_text:'<gray>Телепортация к платформе'><gray>/stp tp</hover> <hover:show_text:'<gray>Имя платформы <gold>(Обязательный параметр)</gold>'><#fc7109>[Имя платформы<gold>*</gold>]</hover>
+  \n  <#fc7109>- <hover:show_text:'<gray>Вставляет схематику на платформу (по умолчанию основную схематику на ближайшую платформы )'><gray>/stp paste</hover> <hover:show_text:'<gray>Имя платформы <gold>(Необязательный параметр)</gold>'><#fc7109>[Имя платформы]</hover> <hover:show_text:'<gray>Имя стадии <gold>(Необязательный параметр)</gold>'><#fc7109>[Имя стадии]</hover>
+  \n  <#fc7109>- <hover:show_text:'<gray>Очищает область платформы'><gray>/stp clear</hover> <hover:show_text:'<gray>Имя платформы <gold>(Необязательный параметр)</gold>'><#fc7109>[Имя платформы]</hover>
+  \n"
+
+  reload: "<green>Плагин перезагружен"
+  tp: "<green>Вы были телепортированы на позицию платформы <gray>%name%"
+  clear: "<green>Очищена область платформы <gray>%name%"
+  delay_paste: "<green><gray>Основная схематика</gray> через <gray>%second%</gray> сек"
+  delay_paste_stage: "<green>Стадия <gray>%stage_name%</gray> через <gray>%second%</gray> сек"
+  paste: "<green>Установлена <gray>основная схематика</gray> платформы <gray>%name%"
+  paste_stage: "<green>Установлена стадия <gray>%stage_name%</gray> на платформе <gray>%name%"
+
+  list_header: " <strikethrough><gradient:#fc7109:#fcd209>     </gradient></strikethrough> <gray><hover:show_text:'<gray>Предыдущая страница'><click:run_command:/stage_platforms list %prev_page%><<</click></hover> <gray>Страница %page% <hover:show_text:'<gray>Следующая страница'><click:run_command:/stage_platforms list %next_page%>>></click></hover> <strikethrough><gradient:#fcd209:#fc7109>     </gradient></strikethrough>"
+  list_string: "    <#fcd209>%index%.</#fcd209> <hover:show_text:'<gray>Посмотреть информацию о платформе'><click:run_command:/stage_platforms info %name%><#fc7109>%name%</click></hover>"
+  list_footer: " "
+
+  info:
+    - " <strikethrough><gradient:#fc7109:#fcd209>          </gradient></strikethrough> <gray>%name% <strikethrough><gradient:#fcd209:#fc7109>          </gradient></strikethrough>"
+    - "  <#EF6400>Центр платформы: <#f48a00>%center_point% <hover:show_text:'<gray>Телепортироваться к месту вставки'><click:run_command:/stage_platforms tp %name%><#94FF1A>[Tp]</click></hover>"
+    - "  <#EF6400>Основная схематика: <#f48a00>%schematic% <hover:show_text:'<gray>Вставить основную схематику'><click:run_command:/stage_platforms paste %name% *><#94FF1A>[Paste]</click></hover>"
+    - " "
+  info_string_stages: "  <gray>- <#EF6400>%stage_name%: <#f48a00>%schematic_name% <hover:show_text:'<gray>Вставить схематику'><click:run_command:/stage_platforms paste %name% %stage_name%><#94FF1A>[Paste]</click></hover>"

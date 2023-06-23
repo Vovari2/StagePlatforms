@@ -1,0 +1,34 @@
+
+# Время до смены стадии, после вызова команды
+timer: 10
+
+# Радиус вокруг центра платформы, в котором будут уведомлены люди о смене платформы
+radius_notice: 100
+
+# Количество платформ на одной странице при вызове команды /stp list
+amount_platform_on_list: 8
+
+
+
+platforms:
+# Пример создания платформв:
+#
+# [name_platform] - Название платформы
+#   center_point: [position] - Координаты центра платформы (Шаблон: [world] [X] [Y] [Z])
+#   general_schematic: [name_schematic] - Название схематики из плагина WorldEdit, основной стадии (/stp paste *)
+#   stages:
+#     [name_stage]: [name_schematic] - Название стадии и название схематики, вставляющаяся при переходе к этой стадии (количество стадии может быть любым)
+#
+  sumo_ice:
+    center_point: world 25 141 -287
+    general_schematic: "sumo_ice"
+    stages:
+      stage_1: "sumo_ice_1"
+      stage_2: "sumo_ice_2"
+  sumo_black:
+    center_point: world 25 141 -287
+    general_schematic: "stage_0"
+    stages:
+      red: "stage_1"
+      orange: "stage_2"
+

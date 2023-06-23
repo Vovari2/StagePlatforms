@@ -1,0 +1,12 @@
+name: StagePlatforms
+version: '${project.version}'
+main: me.vovari2.stageplatforms.SP
+api-version: 1.19
+commands:
+  stage_platforms:
+    description: "Команда для использования стадий платформ"
+    aliases:
+      - stp
+    permission: stage_platforms.*
+depend:
+  - WorldEdit
