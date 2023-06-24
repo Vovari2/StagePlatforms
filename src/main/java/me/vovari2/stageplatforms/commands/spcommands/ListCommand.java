@@ -46,16 +46,16 @@ public class ListCommand extends SPCommand {
     }
     private static List<String> getPlatformsOnPage(int page){
         SP plugin = SP.getInstance();
-        List<String> newDistributors = new ArrayList<>();
+        List<String> newPlatforms = new ArrayList<>();
         int i = 0;
         for(SPPlatform distributor : SP.getInstance().platforms.values()){
             if (i >= (page - 1) * plugin.amountOnOnePage)
-                newDistributors.add(distributor.getName());
+                newPlatforms.add(distributor.getName());
             if (i >= page * plugin.amountOnOnePage - 1)
                 break;
             i++;
         }
-        return newDistributors;
+        return newPlatforms;
     }
     private static boolean isPlatformOnPage(int page){
         return page - 1 >= 0 && SP.getInstance().platforms.values().size() - 1 >= (page - 1) * SP.getInstance().amountOnOnePage;

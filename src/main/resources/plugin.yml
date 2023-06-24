@@ -5,8 +5,7 @@ api-version: 1.19
 commands:
   stage_platforms:
     description: "Команда для использования стадий платформ"
-    aliases:
-      - stp
+    aliases: [stp]
     permission: stage_platforms.*
 depend:
   - WorldEdit

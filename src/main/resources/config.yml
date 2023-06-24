@@ -19,16 +19,19 @@ platforms:
 #   stages:
 #     [name_stage]: [name_schematic] - Название стадии и название схематики, вставляющаяся при переходе к этой стадии (количество стадии может быть любым)
 #
+
   sumo_ice:
-    center_point: world 25 141 -287
-    general_schematic: "sumo_ice"
+    center_point: world 1069 0 -653
+    general_schematic: "sumoL_stage0"
     stages:
-      stage_1: "sumo_ice_1"
-      stage_2: "sumo_ice_2"
-  sumo_black:
-    center_point: world 25 141 -287
-    general_schematic: "stage_0"
+      big: "sumoL_stage1"
+      medium: "sumoL_stage2"
+      small: "sumoL_stage3"
+  sumo_classic:
+    center_point: world 1069 0 -653
+    general_schematic: "sumoCL_stage0"
     stages:
-      red: "stage_1"
-      orange: "stage_2"
+      orange: "sumoCL_stage1"
+      yellow: "sumoCL_stage2"
+      green: "sumoCL_stage3"
 

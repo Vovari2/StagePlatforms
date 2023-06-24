@@ -48,7 +48,7 @@ public class SPPlatform {
     public void sendMessageNearPlayers(Component message){
         double radius = SP.getInstance().radius_notice;
         for (Player player : Bukkit.getOnlinePlayers())
-            if (player.getLocation().distance(center) <= radius)
+            if (player.getLocation().getWorld().equals(center.getWorld()) && player.getLocation().distance(center) <= radius)
                 player.sendMessage(message);
     }
 

@@ -36,7 +36,8 @@ public class SPTaskSeconds extends BukkitRunnable {
                     if (timeTo > plugin.timer || timeTo == 0){
                         delay.getPlatform().clear();
                         try { delay.getSchematic().paste(delay.getPlatform().getCenter()); }
-                        catch (Exception error) {TextUtils.sendWarningMessage(error.getMessage());}
+                        catch (Exception error) {
+                            TextUtils.sendWarningMessage(error.getMessage());}
                         delay.getPlatform().sendMessageNearPlayers(
                                 delay.getStageName().equals("*") ?
                                         SPText.replacePlaceHolder("message.paste", "%name%", delay.getPlatform().getName()) :
